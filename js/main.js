@@ -1,5 +1,15 @@
 // code modified from Aaron Rickle's CSS Rain Effect: 
 //  codepen.io/arickle/pen/XKjMZy
+/* TODO: ideas to replace rain droplets:
+ *  - rather than having an infinite loop of these rain droplets, maybe 
+ *    do a few rain droplets that are big and loud and leave a 'paint splatter' 
+ *    on the page
+ *  - have a few paint splatters hit the screen at random intervals
+ *  - do a blocky "rain drop race" where there are 4-5 different streams that start
+ *    at the top and then make their way down to the bottom of the screen
+ *  - have four droplets come down and once they splash, they light up the background
+ *    of one of the navbar items
+*/
 function make_it_rain() {
   let increment = 0;
   let drops = "";

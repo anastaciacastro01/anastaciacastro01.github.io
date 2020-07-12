@@ -156,3 +156,24 @@ section {
 @media screen and (max-width: 768px) {
 
 }
+
+/*---------------*/
+/* landing page  */
+/* about section */
+/*---------------*/
+
+#about_sec {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: #dcdcdc;
+}
+
+#about_sec img {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+#about_sec div {
+  flex-grow: 2;
+}
