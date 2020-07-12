@@ -1,0 +1,180 @@
+body {
+  /*
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  */
+  margin: 0;
+  padding: 0;
+  font-family: "Patua One", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero_header {
+  /*
+  flex-grow: 1;
+  align-items: center;
+  flex-direction: row;
+  order: 1;
+  border-bottom: 1px solid black;
+  */
+  display: flex;
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff, #dcdcdc);
+  overflow: hidden;
+}
+
+#header_text {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 1;
+}
+
+#header_text h1 {
+  font-weight: bold;
+  font-size: 10vw;
+  margin: 2vh;
+}
+
+#logo_name {
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+}
+
+#navigation {
+  flex-direction: row;
+  flex: 1;
+}
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li {
+  float: left;
+}
+
+#part_two {
+  /*
+  flex-grow: 1;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: row;
+  order: 2;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  */
+  background: #dcdcdc;
+}
+
+/*
+for phones
+@media screen and (max-width: 320px) {
+
+}
+
+for laptops/tablets
+@media screen and (max-width: 768px) {
+
+}
+*/
+
+/*--------------------*/
+/* animation for rain */
+/*--------------------*/
+#rain {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 2vw;
+  height: 10vh;
+  animation: drop 1.5s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  90% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(98vh);
+  }
+}
+
+.stem {
+  width: 0.5vw;
+  height: 60%;
+  margin-left: 1vw;
+  animation: stem 1.5s linear infinite;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  /*
+  95% {
+    opacity: 0.5;
+  }
+  */
+  100% {
+    opacity: 0;
+  }
+}
+
+.splat {
+  width: 3vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: splat 1.5s linear infinite;
+}
+
+@keyframes splat {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
