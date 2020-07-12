@@ -21,15 +21,15 @@ function make_it_rain() {
           +  'style="left: ' + increment + '%;' 
           +  'bottom: ' + (rand_two + rand_two - 1 + 100) + '%;'
           +  'animation-delay: 0.' + rand_one + 's;'
-          +  'animation-duration: 1.5' + rand_one + 's;">'
+          +  'animation-duration: 3.5' + rand_one + 's;">'
           +  '<div class="stem"'
           +  'style="animation-delay: 0.' + rand_one + 's;'
-          +  'animation-duration: 1.5' + rand_one + 's;'
+          +  'animation-duration: 3.5' + rand_one + 's;'
           +  'background: linear-gradient(to bottom, #fff, #' + random_color + ');">'
           +  '</div>'
           +  '<div class="splat"'
           +  'style="animation-delay: 0.' + rand_one + 's;'
-          +  'animation-duration: 1.5' + rand_one + 's;'
+          +  'animation-duration: 3.5' + rand_one + 's;'
           +  'border-top: 0.5vw dotted #' + random_color + ';">'
           +  '</div></div>';
   }
