@@ -1,3 +1,6 @@
+// global variable for the visitor's name
+let VISITOR_NAME;
+
 // code modified from Aaron Rickle's CSS Rain Effect: 
 //  codepen.io/arickle/pen/XKjMZy
 /* TODO: ideas to replace rain droplets:
@@ -62,9 +65,40 @@ function intro() {
   name_input.setAttribute("type", "text");
   name_input.setAttribute("id", "name_input");
   name_input.setAttribute("name", "name");
+  name_input.setAttribute("autocomplete", "off");
+  name_input.setAttribute("onblur", "change_name()");
+  name_input.addEventListener(
+    'keyup',
+    function(e) {
+      if(e.which==13 || e.keyCode==13) {
+        this.blur();
+      }
+    },
+    'false'
+  );
   header_text.appendChild(name_input);
   header_text.appendChild(document.createElement("BR"));
+
+  name_input.onblur = function() {
+    if(name_input.value != ""){
+      change_name(header_text, intro_h1, name_input);
+    }
+  }
+}
+
+function change_name(header_text, intro_h1, name_input) {
+  VISITOR_NAME = name_input.value;
   
-  let name = name_input.value;
-  console.log(name);
+  intro_h1.parentNode.removeChild(intro_h1);
+  name_input.parentNode.removeChild(name_input);
+
+  header_text.innerHTML += "<h1>Nice to meet you,</h1><br>";
+  header_text.innerHTML += "<h1>" + VISITOR_NAME + "!</h1><br>";
+  
+  window.setTimeout(display_last_intro, 2000, header_text);
+}
+
+function display_last_intro(header_text) {
+  header_text.innerHTML = "";
+  header_text.innerHTML += "<h1>I'm Anastacia</h1>";
 }

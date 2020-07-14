@@ -42,13 +42,24 @@ section {
 
 #header_text {
   text-align: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   z-index: 1;
+  font-style: "Thin 100";
 }
 
 #header_text h1 {
   font-size: 6vw;
   margin: 2vh;
+}
+
+#name_input {
+  background-color: transparent;
+  height: 6vw;
+  border: none;
+  border-bottom: 0.1vw solid black;
+  font-size: 4vw;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 /*--------------------*/
