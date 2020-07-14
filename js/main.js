@@ -48,3 +48,23 @@ function make_it_rain() {
   let rain_element = document.getElementById("rain");
   rain_element.innerHTML += drops;
 }
+
+function intro() {
+  let header_text = document.getElementById("header_text");
+
+  let intro_h1 = document.createElement("H1");
+  let intro_text = document.createTextNode("Hi! What's your name?");
+  intro_h1.appendChild(intro_text);
+  header_text.appendChild(intro_h1);
+  header_text.appendChild(document.createElement("BR"));
+  
+  let name_input = document.createElement("INPUT");
+  name_input.setAttribute("type", "text");
+  name_input.setAttribute("id", "name_input");
+  name_input.setAttribute("name", "name");
+  header_text.appendChild(name_input);
+  header_text.appendChild(document.createElement("BR"));
+  
+  let name = name_input.value;
+  console.log(name);
+}
